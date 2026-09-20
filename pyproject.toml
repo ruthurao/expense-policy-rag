@@ -1,0 +1,42 @@
+[project]
+name = "expense-policy-rag"
+version = "0.1.0"
+description = "Grounded expense-policy assistant for the Mini RAG Lab."
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "pydantic",
+    "python-dotenv",
+    "psycopg[binary]",
+    "pgvector",
+    "numpy",
+    "sentence-transformers",
+    "openai",
+]
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "httpx",
+    "mypy",
+    "ruff",
+    "pytest-cov",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/expense_rag"]
+
+[tool.mypy]
+strict = true
+files = ["src", "tests"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
