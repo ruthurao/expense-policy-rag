@@ -22,6 +22,8 @@ def database_url() -> str:
 
 def connect() -> psycopg.Connection:
     connection = psycopg.connect(database_url())
+    connection.execute("CREATE EXTENSION IF NOT EXISTS vector")
+    connection.commit()
     register_vector(connection)
     return connection
 
