@@ -1,5 +1,8 @@
 """One stored policy section: text, labels, and optional embedding."""
 
+from __future__ import annotations
+
+
 from dataclasses import dataclass
 
 

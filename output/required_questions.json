@@ -1,0 +1,148 @@
+[
+  {
+    "question": "How much can I spend on food each day?",
+    "response": {
+      "answer": "Employees may claim up to $65 per day for meals.",
+      "citation": {
+        "document": "Employee Expense Policy",
+        "version": "2.0",
+        "section": "1. Meals"
+      },
+      "retrieved_chunks": [
+        {
+          "section": "1. Meals",
+          "distance": 0.08
+        },
+        {
+          "section": "5. Receipts",
+          "distance": 0.41
+        },
+        {
+          "section": "6. Submission Deadline",
+          "distance": 0.52
+        }
+      ]
+    }
+  },
+  {
+    "question": "Can I book first-class airfare?",
+    "response": {
+      "answer": "Employees must purchase economy airfare. Business-class airfare requires written approval from a vice president.",
+      "citation": {
+        "document": "Employee Expense Policy",
+        "version": "2.0",
+        "section": "3. Airfare"
+      },
+      "retrieved_chunks": [
+        {
+          "section": "3. Airfare",
+          "distance": 0.06
+        },
+        {
+          "section": "2. Hotels",
+          "distance": 0.44
+        },
+        {
+          "section": "4. Ground Transportation",
+          "distance": 0.49
+        }
+      ]
+    }
+  },
+  {
+    "question": "My hotel costs $250. What do I need?",
+    "response": {
+      "answer": "A manager must approve higher rates before booking.",
+      "citation": {
+        "document": "Employee Expense Policy",
+        "version": "2.0",
+        "section": "2. Hotels"
+      },
+      "retrieved_chunks": [
+        {
+          "section": "2. Hotels",
+          "distance": 0.07
+        },
+        {
+          "section": "5. Receipts",
+          "distance": 0.38
+        },
+        {
+          "section": "1. Meals",
+          "distance": 0.47
+        }
+      ]
+    }
+  },
+  {
+    "question": "Do I need a receipt for a $20 taxi?",
+    "response": {
+      "answer": "No receipt is required under this policy. Receipts are required for individual expenses of $25 or more.",
+      "citation": {
+        "document": "Employee Expense Policy",
+        "version": "2.0",
+        "section": "5. Receipts"
+      },
+      "retrieved_chunks": [
+        {
+          "section": "5. Receipts",
+          "distance": 0.09
+        },
+        {
+          "section": "4. Ground Transportation",
+          "distance": 0.22
+        },
+        {
+          "section": "1. Meals",
+          "distance": 0.48
+        }
+      ]
+    }
+  },
+  {
+    "question": "Can I claim a limousine upgrade?",
+    "response": {
+      "answer": "Luxury vehicle upgrades are not reimbursable.",
+      "citation": {
+        "document": "Employee Expense Policy",
+        "version": "2.0",
+        "section": "4. Ground Transportation"
+      },
+      "retrieved_chunks": [
+        {
+          "section": "4. Ground Transportation",
+          "distance": 0.05
+        },
+        {
+          "section": "3. Airfare",
+          "distance": 0.43
+        },
+        {
+          "section": "2. Hotels",
+          "distance": 0.51
+        }
+      ]
+    }
+  },
+  {
+    "question": "Does the company reimburse gym memberships?",
+    "response": {
+      "answer": "The provided policy does not answer this question.",
+      "citation": null,
+      "retrieved_chunks": [
+        {
+          "section": "5. Receipts",
+          "distance": 0.61
+        },
+        {
+          "section": "1. Meals",
+          "distance": 0.64
+        },
+        {
+          "section": "4. Ground Transportation",
+          "distance": 0.67
+        }
+      ]
+    }
+  }
+]

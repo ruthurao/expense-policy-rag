@@ -6,7 +6,6 @@ from dataclasses import dataclass
 
 from expense_rag.embeddings import embed_text
 from expense_rag.models import PolicyChunk
-from expense_rag.store import connect
 
 RETRIEVE_LIMIT = 3
 
@@ -27,7 +26,7 @@ def cosine_distance(left: list[float], right: list[float]) -> float:
     """Cosine distance: 1 - cosine similarity. Matches pgvector's <=> operator."""
     if len(left) != len(right):
         raise ValueError("vectors must be the same length")
-    dot = sum(a * b for a, b in zip(left, right, strict=True))
+    dot = sum(a * b for a, b in zip(left, right))
     left_norm = sum(a * a for a in left) ** 0.5
     right_norm = sum(b * b for b in right) ** 0.5
     if left_norm == 0 or right_norm == 0:
@@ -102,5 +101,7 @@ def retrieve(question: str, connection=None, limit: int = RETRIEVE_LIMIT) -> lis
     query_vector = embed_text(question)
     if connection is not None:
         return retrieve_sql(connection, query_vector, limit)
+    from expense_rag.store import connect
+
     with connect() as owned:
         return retrieve_sql(owned, query_vector, limit)
