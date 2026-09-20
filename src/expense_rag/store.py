@@ -57,7 +57,7 @@ def upsert_chunks(connection: psycopg.Connection, chunks: list[PolicyChunk]) -> 
                 chunk.section,
                 chunk.section_title,
                 chunk.text,
-                None,
+                chunk.embedding,
             ),
         )
     connection.commit()

@@ -1,4 +1,4 @@
-"""Stored chunk shape. Embeddings are added in a later phase."""
+"""One stored policy section: text, labels, and optional embedding."""
 
 from dataclasses import dataclass
 
@@ -11,3 +11,4 @@ class PolicyChunk:
     section: str
     section_title: str
     text: str
+    embedding: list[float] | None = None
